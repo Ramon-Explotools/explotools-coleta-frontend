@@ -140,7 +140,7 @@ const updateInvoiceFileList = () => {
   });
 
   receivingStatusEl.textContent = selectedInvoiceFiles.length
-    ? `${selectedInvoiceFiles.length} PDF(s) de invoice selecionado(s).`
+    ? `${selectedInvoiceFiles.length} PDF(s) selecionado(s).`
     : "Aguardando arquivos.";
 };
 
@@ -257,7 +257,7 @@ printButton.addEventListener("click", () => {
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   if (!selectedFiles.length) {
-    statusEl.textContent = "Selecione ao menos um PDF de venda.";
+    statusEl.textContent = "Selecione ao menos um PDF de venda ou nota fiscal.";
     return;
   }
 
@@ -296,7 +296,7 @@ form.addEventListener("submit", async (event) => {
 receivingForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   if (!selectedInvoiceFiles.length) {
-    receivingStatusEl.textContent = "Selecione ao menos um PDF de invoice.";
+    receivingStatusEl.textContent = "Selecione ao menos um PDF de invoice ou nota fiscal.";
     return;
   }
 
